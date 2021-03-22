@@ -52,7 +52,7 @@ class ProductMainView extends React.Component {
   componentDidMount() {
     const { productID } = this.props;
     const promises = [];
-    promises.push(axios.get(`/products/?product_id=${productID}`)
+    promises.push(axios.get(`http://localhost:5000/products/${productID}`)
       .then(({ data }) => {
         this.setState({
           currentProduct: data,
